@@ -1,0 +1,131 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+::after,
+::before {
+	box-sizing: border-box;
+}
+
+html {
+	box-sizing: normal
+}
+
+body {
+	margin: 0
+}
+
+h1 {
+	font-size: 2rem;
+	margin: 0;
+}
+
+h2 {
+	font-size: 1.5rem
+}
+
+h3 {
+	font-size: 1.17rem
+}
+
+h4 {
+	font-size: 1rem
+}
+
+h5 {
+	font-size: .83rem
+}
+
+h6 {
+	font-size: .67rem
+}
+
+ul,
+ol {
+	list-style: none
+}
+
+a {
+	text-decoration: none;
+}
+
+pre {
+	white-space: pre-wrap
+}
+
+hr {
+	border-style: solid;
+	border-width: 1px 0 0;
+	color: inherit;
+	height: 0;
+	overflow: visible
+}
+
+audio,
+canvas,
+embed,
+iframe,
+img,
+object,
+svg,
+video {
+	margin: 0;
+	padding: 0;
+	display: block;
+	max-width: 100%
+}
+
+canvas,
+img,
+svg,
+video {
+	height: auto
+}
+
+audio {
+	width: 100%
+}
+
+img {
+	border-style: none;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+svg {
+	overflow: hidden
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+	display: block
+}
+
+[type=checkbox],
+[type=radio] {
+	box-sizing: border-box;
+	padding: 0
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	color: inherit;
+	vertical-align: middle;
+	text-align: inherit;
+	font-style: inherit;
+	-webkit-appearance: none;
+	appearance: none;
+}

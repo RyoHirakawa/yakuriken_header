@@ -1,0 +1,117 @@
+@mixin header__navText($color,$fontSize,$fontHeight,$weight:700){
+    font-family: IBM Plex Sans JP;
+    color: $color;
+    font-size: $fontSize;
+    line-height: $fontHeight;
+    font-weight: $weight;
+    text-decoration: none;
+}
+
+.header{
+    height: 110px;
+    display: flex;
+    align-items: center;
+    text-wrap: nowrap;
+    box-shadow: 0px 0px 8px 0px #00000033;
+    &__Wrap{
+        width: 100%;
+        margin: 0 36px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__logo{
+        display: flex;
+        height: 69.54px;
+        align-items: center;
+        gap: 12px;
+        &Img{
+            width: 140px;
+            height: 49.54px;
+        }
+        &Text{
+            @include header__navText(#333,12px,12px,500)
+        }
+    }
+    &__nav{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 516px;
+        height: 72px;
+        &Top{
+            &List{
+                display: flex;
+                justify-content: space-between;
+                gap: 40px;
+                align-items: center;
+                list-style: none;
+            }
+            &Left{
+                display: flex;
+                justify-content: space-between;
+                gap: 28px;
+                &Btn{
+                    @include header__navText(#1B8751,13px,13px);
+                    border-radius: 22px;
+                    border: #258651 1px solid;
+                    box-sizing: border-box;
+                    padding: 7px 16px;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        color: #fff;
+                        background-color: #258651;
+                    }
+                }
+            }
+            &Right{
+                &Btn{
+                    @include header__navText(#FFF,14px,14px);
+                    border-radius: 22px;
+                    background-color: #258651;
+                    border: #258651 1px solid;
+                    display: inline-flex;
+                    height: 32px;
+                    padding: 0 28px;
+                    align-items: center;
+                    position: relative;
+                    transition: all 0.3s ease-in-out;
+                    &::after{
+                        content: '';
+                        width: 5px;
+                        height: 5px;
+                        border-top: solid 2px #FFF;
+                        border-right: solid 2px #FFF;
+                        transform: rotate(45deg);
+                        position: absolute;
+                        top: 12px;
+                        right: 15px;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &:hover{
+                        @include header__navText(#258651, 14px,14px);
+                        background-color: #FFF;
+                        &::after{
+                            border-color: #258651;
+                        }
+                    }
+                }
+            }
+        }
+        &Bottom{
+            &List{
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+                gap: 44px;
+            }
+            &ListItem{
+                @include header__navText(#333,17px,23.8px);
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}

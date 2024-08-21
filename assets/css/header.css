@@ -1,0 +1,127 @@
+.header {
+  height: 110px;
+  display: flex;
+  align-items: center;
+  text-wrap: nowrap;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+}
+.header__Wrap {
+  width: 100%;
+  margin: 0 36px;
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  display: flex;
+  height: 69.54px;
+  align-items: center;
+  gap: 12px;
+}
+.header__logoImg {
+  width: 140px;
+  height: 49.54px;
+}
+.header__logoText {
+  font-family: IBM Plex Sans JP;
+  color: #333;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.header__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 516px;
+  height: 72px;
+}
+.header__navTopList {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+  list-style: none;
+}
+.header__navTopLeft {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+}
+.header__navTopLeftBtn {
+  font-family: IBM Plex Sans JP;
+  color: #1B8751;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 22px;
+  border: #258651 1px solid;
+  box-sizing: border-box;
+  padding: 7px 16px;
+  transition: all 0.3s ease-in-out;
+}
+.header__navTopLeftBtn:hover {
+  color: #fff;
+  background-color: #258651;
+}
+.header__navTopRightBtn {
+  font-family: IBM Plex Sans JP;
+  color: #FFF;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 22px;
+  background-color: #258651;
+  border: #258651 1px solid;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 28px;
+  align-items: center;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.header__navTopRightBtn::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-top: solid 2px #FFF;
+  border-right: solid 2px #FFF;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  transition: all 0.3s ease-in-out;
+}
+.header__navTopRightBtn:hover {
+  font-family: IBM Plex Sans JP;
+  color: #258651;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: #FFF;
+}
+.header__navTopRightBtn:hover::after {
+  border-color: #258651;
+}
+.header__navBottomList {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 44px;
+}
+.header__navBottomListItem {
+  font-family: IBM Plex Sans JP;
+  color: #333;
+  font-size: 17px;
+  line-height: 23.8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.header__navBottomListItem:hover {
+  opacity: 0.6;
+}
