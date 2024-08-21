@@ -193,7 +193,7 @@ button {
     grid-template-columns: repeat(5, 1fr);
     height: 100%;
   }
-  .headerSp .headerSp__bottom .headerSpBottomList .headerSpBottomList__item:not(:first-child):not(:last-child) {
+  .headerSp .headerSp__bottom .headerSpBottomList .headerSpBottomList__item:not(:first-child, :last-child) {
     border-left: solid #ccc 1px;
   }
   .headerSp .headerSp__bottom .headerSpBottomList .headerSpBottomList__item.--bgGreen {
@@ -216,9 +216,9 @@ button {
     margin: 0 auto;
   }
   .headerSpBottomLink .headerSpBottomLink__text {
+    margin: 0 auto;
     color: #333;
     font-size: 10px;
-    margin: 0 auto;
     font-weight: 700;
   }
   .headerSpBottomLink .headerSpBottomLink__text.--white {
@@ -228,14 +228,14 @@ button {
     cursor: pointer;
   }
   .spMenu.--hidden .spMenuOverlay {
-    opacity: 0;
     visibility: hidden;
+    opacity: 0;
   }
   .spMenu.--hidden .spMenuContents {
+    visibility: hidden;
     transform: translateY(100px);
     transition: 0.7s;
     opacity: 0;
-    visibility: hidden;
   }
   .spMenuOverlay {
     position: fixed;
@@ -282,12 +282,12 @@ button {
     font-size: 10px;
     font-weight: 400;
   }
-  .spMenuWindow .spMenuWindowList {
+  .spMenuWindow .spMenuWindowListWrapper {
     overflow-y: scroll;
     height: 100%;
     margin-top: 16px;
   }
-  .spMenuWindow .spMenuWindowList::-webkit-scrollbar {
+  .spMenuWindow .spMenuWindowListWrapper::-webkit-scrollbar {
     display: none;
   }
   .spMenuCloseButton {
@@ -326,6 +326,6 @@ button {
   }
   main {
     height: 4000px;
-    background-color: #eee;
+    background-color: rgb(211, 206, 206);
   }
 }
