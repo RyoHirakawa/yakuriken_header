@@ -142,6 +142,9 @@ button {
 }
 
 @media screen and (width <= 1140px) {
+  .headerPc {
+    display: none;
+  }
   .headerSp {
     display: block;
   }
@@ -154,7 +157,7 @@ button {
     width: 100%;
     height: 60px;
     padding: 0 16px;
-    background-color: #FFF;
+    background-color: #fff;
     transition: 0.7s;
   }
   .headerSp .headerSp__top .headerSp__top__logo {
@@ -182,7 +185,7 @@ button {
     width: 100%;
     height: 64px;
     box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2);
-    background-color: #FFF;
+    background-color: #fff;
     transition: 0.7s;
   }
   .headerSp .headerSp__bottom .headerSpBottomList {
@@ -191,11 +194,11 @@ button {
     height: 100%;
   }
   .headerSp .headerSp__bottom .headerSpBottomList .headerSpBottomList__item:not(:first-child):not(:last-child) {
-    border-left: solid #CCC 1px;
+    border-left: solid #ccc 1px;
   }
   .headerSp .headerSp__bottom .headerSpBottomList .headerSpBottomList__item.--bgGreen {
-    background-color: #1B8751;
-    color: #FFF;
+    background-color: #1b8751;
+    color: #fff;
   }
   .headerSp .headerSp__bottom.--hidden {
     transform: translateY(100%);
@@ -219,7 +222,7 @@ button {
     font-weight: 700;
   }
   .headerSpBottomLink .headerSpBottomLink__text.--white {
-    color: #FFF;
+    color: #fff;
   }
   .headerSpBottomLink.--cursor {
     cursor: pointer;
@@ -259,13 +262,13 @@ button {
     margin-top: 5vh;
     padding: 20px 16px 32px;
     border-radius: 12px;
-    background-color: #FFF;
+    background-color: #fff;
   }
   .spMenuWindow .spMenuWindow__top {
     display: flex;
     align-items: center;
     padding-bottom: 16px;
-    border-bottom: 1px solid #CCC;
+    border-bottom: 1px solid #ccc;
   }
   .spMenuWindow .spMenuWindow__top .spMenuWindow__top__logo {
     display: block;
@@ -296,7 +299,7 @@ button {
     height: 56px;
     margin: auto;
     border-radius: 50%;
-    background-color: #FFF;
+    background-color: #fff;
     text-align: center;
     cursor: pointer;
   }
@@ -323,6 +326,6 @@ button {
   }
   main {
     height: 4000px;
-    background-color: #EEE;
+    background-color: #eee;
   }
 }

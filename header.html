@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SPヘッダー</title>
+    <meta name="discription" content="" />
+    <link rel="stylesheet" href="/assets/css/headerPc.css" media="screen" />
+    <link rel="stylesheet" href="/assets/css/headerSp.css" media="screen" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="headerPc">
+        <div class="headerPc__Wrap">
+          <div class="headerPc__logo">
+            <img
+              class="headerPc__logoImg"
+              src="assets/images/logo_company.png"
+              alt="会社ロゴ"
+            />
+            <p class="headerPc__logoText">株式会社東北薬理研</p>
+          </div>
+          <div class="headerPc__nav">
+            <nav class="header__navTop">
+              <ul class="headerPc__navTopList">
+                <li>
+                  <div class="headerPc__navTopLeft">
+                    <a class="headerPc__navTopLeftButton" href=""
+                      >医療機関の方へ</a
+                    >
+                    <a class="headerPc__navTopLeftButton" href=""
+                      >治験依頼者の方へ</a
+                    >
+                  </div>
+                </li>
+                <li class="headerPc__navTopRight">
+                  <a class="headerPc__navTopRightButton" href=""
+                    >お問い合わせ</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <nav class="header_navBottom">
+              <ul class="headerPc__navBottomList">
+                <li class="headerPc__navBottomListColumnItem">
+                  <a class="headerPc__navBottomListItem" href="">サービス</a>
+                </li>
+                <li>
+                  <a class="headerPc__navBottomListItem" href="">治療実績</a>
+                </li>
+                <li>
+                  <a class="headerPc__navBottomListItem" href="">企業情報</a>
+                </li>
+                <li>
+                  <a class="headerPc__navBottomListItem" href="">お知らせ</a>
+                </li>
+                <li>
+                  <a class="headerPc__navBottomListItem" href="">採用情報</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="headerSp">
+        <div class="headerSp__top" id="js-headerSp__top">
+          <a href="#">
+            <img
+              class="headerSp__top__logo"
+              src="/assets/images/logo_company.png"
+            />
+          </a>
+          <nav class="headerSp__top__nav">
+            <ul class="headerSpTopList">
+              <li class="headerSpTopList__item">
+                <a href="#" class="headerSpTopList__item__link"
+                  >医療機関の方へ</a
+                >
+              </li>
+              <li class="headerSpTopList__item">
+                <a href="#" class="headerSpTopList__item__link"
+                  >治験依頼者の方へ</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <nav class="headerSp__bottom" id="js-headerSp__bottom">
+          <ul class="headerSpBottomList">
+            <li class="headerSpBottomList__item">
+              <a href="#" class="headerSpBottomLink">
+                <img
+                  src="/assets/images/icon_home.svg"
+                  alt=""
+                  class="headerSpBottomLink__icon"
+                />
+                <span class="headerSpBottomLink__text">トップ</span>
+              </a>
+            </li>
+            <li class="headerSpBottomList__item">
+              <a href="#" class="headerSpBottomLink">
+                <img
+                  src="/assets//images//icon_pill.svg"
+                  alt=""
+                  class="headerSpBottomLink__icon"
+                />
+                <span class="headerSpBottomLink__text">サービス</span>
+              </a>
+            </li>
+            <li class="headerSpBottomList__item">
+              <a href="#" class="headerSpBottomLink">
+                <img
+                  src="/assets/images/icon_finance.svg"
+                  alt=""
+                  class="headerSpBottomLink__icon"
+                />
+                <span class="headerSpBottomLink__text">治験実績</span>
+              </a>
+            </li>
+            <li class="headerSpBottomList__item">
+              <a href="#" class="headerSpBottomLink">
+                <img
+                  src="/assets/images/icon_mail.svg"
+                  alt=""
+                  class="headerSpBottomLink__icon"
+                />
+                <span class="headerSpBottomLink__text">お知らせ</span>
+              </a>
+            </li>
+            <li class="headerSpBottomList__item --bgGreen">
+              <div
+                href="#"
+                class="headerSpBottomLink --pointer"
+                id="js-spMenuOpenButton"
+              >
+                <img
+                  src="/assets/images/icon_menu.svg"
+                  alt=""
+                  class="headerSpBottomLink__icon"
+                />
+                <span class="headerSpBottomLink__text --white">メニュー</span>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="spMenu --hidden" id="js-spMenu">
+          <div class="spMenuOverlay"></div>
+          <div class="spMenuContents">
+            <div class="spMenuWindow">
+              <div class="spMenuWindow__top">
+                <img
+                  class="spMenuWindow__top__logo"
+                  src="/assets/images/logo_company.png"
+                />
+                <div class="spMenuWindow__top__text">株式会社東北薬理研</div>
+              </div>
+
+              <!-- footer入れ込み -->
+              <div class="spMenuWindowList">
+                <div>
+                  a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />
+                </div>
+              </div>
+            </div>
+
+            <div class="spMenuCloseButton" id="js-spMenuCloseButton">
+              <img
+                src="/assets/images/icon_close.svg"
+                class="spMenuCloseButton__icon"
+              />
+              <div class="spMenuCloseButton__text">閉じる</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main></main>
+
+    <!-- 一旦ここに -->
+    <script>
+      function openSpMenu() {
+        const headerSp__top = document.querySelector("#js-headerSp__top");
+        headerSp__top.classList.add("--hidden");
+
+        const headerSp__bottom = document.querySelector("#js-headerSp__bottom");
+        headerSp__bottom.classList.add("--hidden");
+
+        const spMenu = document.querySelector("#js-spMenu");
+        spMenu.classList.remove("--hidden");
+      }
+      function closeSpMenu() {
+        const headerSp__top = document.querySelector("#js-headerSp__top");
+        headerSp__top.classList.remove("--hidden");
+
+        const headerSp__bottom = document.querySelector("#js-headerSp__bottom");
+        headerSp__bottom.classList.remove("--hidden");
+
+        const spMenu = document.querySelector("#js-spMenu");
+        spMenu.classList.add("--hidden");
+      }
+
+      const spMenuOpenButton = document.querySelector("#js-spMenuOpenButton");
+      spMenuOpenButton.addEventListener("click", openSpMenu);
+
+      const spMenuCloseButton = document.querySelector("#js-spMenuCloseButton");
+      spMenuCloseButton.addEventListener("click", closeSpMenu);
+    </script>
+  </body>
+</html>
