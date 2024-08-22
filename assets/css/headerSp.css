@@ -142,13 +142,10 @@ button {
 }
 
 @media screen and (width <= 1140px) {
-  .headerPc {
-    display: none;
-  }
   .headerSp {
     display: block;
   }
-  .headerSp .headerSp__top {
+  .headerSpTop {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -158,26 +155,28 @@ button {
     height: 60px;
     padding: 0 16px;
     background-color: #fff;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
     transition: 0.7s;
   }
-  .headerSp .headerSp__top .headerSp__top__logo {
+  .headerSpTop .headerSpTop__logo {
     height: 35.38px;
   }
-  .headerSp .headerSp__top.--hidden {
+  .headerSpTop.--hidden {
     transform: translateY(-100%);
     transition: 0.7s;
   }
-  .headerSp .headerSpTopList {
+  .headerSpTopList {
     display: flex;
     gap: 16px;
+    height: 17px;
   }
-  .headerSp .headerSpTopList .headerSpTopList__item .headerSpTopList__item__link {
+  .headerSpTopList .headerSpTopList__item .headerSpTopList__item__link {
     color: #333;
     font-size: 12px;
     font-family: "IBM Plex Sans JP";
     font-weight: 500;
   }
-  .headerSp .headerSp__bottom {
+  .headerSp__bottom {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -188,21 +187,20 @@ button {
     background-color: #fff;
     transition: 0.7s;
   }
-  .headerSp .headerSp__bottom .headerSpBottomList {
+  .headerSp__bottom.--hidden {
+    transform: translateY(100%);
+    transition: 0.7s;
+  }
+  .headerSpBottomList {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     height: 100%;
   }
-  .headerSp .headerSp__bottom .headerSpBottomList .headerSpBottomList__item:not(:first-child, :last-child) {
+  .headerSpBottomList .headerSpBottomList__item:not(:first-child, :last-child) {
     border-left: solid #ccc 1px;
   }
-  .headerSp .headerSp__bottom .headerSpBottomList .headerSpBottomList__item.--bgGreen {
+  .headerSpBottomList .headerSpBottomList__item.--bgGreen {
     background-color: #1b8751;
-    color: #fff;
-  }
-  .headerSp .headerSp__bottom.--hidden {
-    transform: translateY(100%);
-    transition: 0.7s;
   }
   .headerSpBottomLink {
     display: flex;
@@ -231,7 +229,7 @@ button {
     visibility: hidden;
     opacity: 0;
   }
-  .spMenu.--hidden .spMenuContents {
+  .spMenu.--hidden .spMenuForeground {
     visibility: hidden;
     transform: translateY(100px);
     transition: 0.7s;
@@ -244,7 +242,7 @@ button {
     height: 100%;
     background: rgba(37, 134, 81, 0.6);
   }
-  .spMenuContents {
+  .spMenuForeground {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -258,36 +256,37 @@ button {
     display: flex;
     flex-direction: column;
     width: 90vw;
+    width: calc(100% - 140px);
     height: 80vh;
     margin-top: 5vh;
     padding: 20px 16px 32px;
     border-radius: 12px;
     background-color: #fff;
   }
-  .spMenuWindow .spMenuWindow__top {
+  .spMenuWindowCompany {
     display: flex;
     align-items: center;
     padding-bottom: 16px;
     border-bottom: 1px solid #ccc;
   }
-  .spMenuWindow .spMenuWindow__top .spMenuWindow__top__logo {
+  .spMenuWindowCompany .spMenuWindowCompany__logo {
     display: block;
     width: 100px;
     height: 35.38px;
   }
-  .spMenuWindow .spMenuWindow__top .spMenuWindow__top__text {
+  .spMenuWindowCompany .spMenuWindowCompany__text {
     display: block;
     margin-left: 16px;
     color: #333;
-    font-size: 10px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 500;
   }
-  .spMenuWindow .spMenuWindowListWrapper {
+  .spMenuWindowListWrapper {
     overflow-y: scroll;
     height: 100%;
     margin-top: 16px;
   }
-  .spMenuWindow .spMenuWindowListWrapper::-webkit-scrollbar {
+  .spMenuWindowListWrapper::-webkit-scrollbar {
     display: none;
   }
   .spMenuCloseButton {
@@ -303,29 +302,37 @@ button {
     text-align: center;
     cursor: pointer;
   }
+  .spMenuCloseButton .spMenuCloseButton__icon {
+    width: 32px;
+    height: 32px;
+  }
   .spMenuCloseButton .spMenuCloseButton__text {
     display: block;
     font-size: 10px;
     font-weight: 700;
   }
-  @-webkit-keyframes slideIn-Up {
-    0% {
-      transform: translateY(60px);
-    }
-    100% {
-      transform: translateY(0);
-    }
+}
+@-webkit-keyframes slideIn-Up {
+  0% {
+    transform: translateY(60px);
   }
-  @keyframes slideIn-Up {
-    0% {
-      transform: translateY(60px);
-    }
-    100% {
-      transform: translateY(0);
-    }
+  100% {
+    transform: translateY(0);
   }
-  main {
-    height: 4000px;
-    background-color: rgb(211, 206, 206);
+}
+@keyframes slideIn-Up {
+  0% {
+    transform: translateY(60px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media screen and (width <= 768px) {
+  .spMenuWindow {
+    width: calc(100% - 60px);
+  }
+  .spMenuWindow .spMenuWindow__top .spMenuWindow__top__text {
+    font-size: 12px;
   }
 }

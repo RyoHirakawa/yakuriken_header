@@ -1,43 +1,34 @@
-.footerTop {
-  padding: 52px 0;
-  background-color: #faf8f4;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .footerTopContainer {
-  width: 1040px;
-  gap: 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: 1040px;
+  gap: 32px;
 }
 
 .footerTopMain {
-  width: 100%;
-  gap: 40px;
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  gap: 40px;
 }
 
 .footerTopContents {
-  gap: 20px;
-  flex: 1;
   display: flex;
   flex-direction: column;
+  flex: 1;
+  gap: 20px;
 }
 .footerTopContents.-otherLinks {
   gap: 32px;
 }
 
 .footerTopTitle .footerTopTitle__link {
-  font-weight: 700;
-  font-size: 1.8rem;
-  line-height: 25.2px;
   color: #1b8751;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 25.2px;
 }
 
 .footerTopTitleLabel {
@@ -45,12 +36,12 @@
 }
 
 .footerTopList {
-  gap: 16px;
-  padding: 0 12px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
+  padding: 0 12px;
+  gap: 16px;
 }
 .footerTopList .footerTopList__link {
   font-size: 1.6rem;
@@ -68,35 +59,35 @@
 }
 
 .footerBottom {
-  width: 100%;
-  padding: 24px 0;
   display: flex;
   justify-content: center;
+  width: 100%;
+  padding: 24px 0;
 }
 
 .footerBottomContainer {
-  width: 1040px;
-  gap: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 1040px;
+  gap: 20px;
 }
 .footerBottomContainer .footerBottom__text {
   font-size: 1.2rem;
   line-height: 15px;
 }
 
-@media screen and (max-width: 1140px) {
+@media screen and (width <= 1140px) {
   .footerTop {
     padding: 52px 32px;
   }
   .footerTopContainer {
-    width: 100%;
-    gap: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
+    gap: 40px;
   }
   .footerTopMain {
     gap: 8px;
@@ -105,42 +96,42 @@
     justify-content: space-between;
   }
   .footerTopContents {
-    width: 100%;
-    gap: 8px;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    gap: 8px;
   }
   .footerTopContents.-otherLinks {
     gap: 8px;
   }
   .footerTopTitle {
-    border-bottom: 1px solid #ccc;
-    padding: 12px 0 13px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 12px 0 13px;
+    border-bottom: 1px solid #ccc;
   }
   .footerTopTitle .footerTopTitle__link {
-    font-weight: 700;
-    font-size: 1.6rem;
-    line-height: 22.4px;
     color: #1b8751;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 22.4px;
   }
   .footerTopTitleLabel {
+    display: block;
+    position: relative;
     width: 14px;
     height: 14px;
-    position: relative;
-    display: block;
   }
   .footerTopTitleLabel::before, .footerTopTitleLabel::after {
-    width: 100%;
-    height: 2px;
     position: absolute;
-    content: "";
-    background-color: #1b8751;
     top: 50%;
-    transform: rotate(0deg);
+    width: 100%;
+    height: 1.5px;
+    background-color: #1b8751;
+    transform: translateY(-50%) rotate(0deg);
     transition: 0.5s;
+    content: "";
   }
   .footerTopTitleLabel::after {
     transform: rotate(-90deg);
@@ -150,9 +141,9 @@
     transition: 0.5s;
   }
   .footerTopList {
-    display: none;
-    gap: 0px;
+    gap: 0;
     width: 100%;
+    transition: 0.5s;
   }
   .footerTopList .footerTopList__item {
     width: 100%;
@@ -163,32 +154,29 @@
     font-size: 1.4rem;
     line-height: 19.6px;
   }
-  .footerTopList.-open {
-    display: block;
-  }
   .footerTopOthers {
-    width: 100%;
-    gap: 16px;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    gap: 16px;
   }
   .footerTopOthers .footerTopOthers__text {
     font-size: 1.2rem;
     line-height: 18px;
   }
   .footerBottom {
-    width: 100%;
-    padding: 24px 32px;
     display: flex;
     justify-content: center;
+    width: 100%;
+    padding: 24px 32px;
   }
   .footerBottomContainer {
-    width: 100%;
-    gap: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    gap: 20px;
   }
   .footerBottomContainer .footerBottom__text {
     font-size: 1rem;
