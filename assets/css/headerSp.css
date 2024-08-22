@@ -222,7 +222,7 @@ button {
   .headerSpBottomLink .headerSpBottomLink__text.--white {
     color: #fff;
   }
-  .headerSpBottomLink.--cursor {
+  .headerSpBottomLink.--pointer {
     cursor: pointer;
   }
   .spMenu.--hidden .spMenuOverlay {
@@ -280,14 +280,6 @@ button {
     color: #333;
     font-size: 14px;
     font-weight: 500;
-  }
-  .spMenuWindowListWrapper {
-    overflow-y: scroll;
-    height: 100%;
-    margin-top: 16px;
-  }
-  .spMenuWindowListWrapper::-webkit-scrollbar {
-    display: none;
   }
   .spMenuCloseButton {
     display: flex;

@@ -105,7 +105,7 @@ $headerSpAnimationDuration: 0.7s;
       }
     }
 
-    &.--cursor {
+    &.--pointer {
       cursor: pointer;
     }
   }
@@ -175,15 +175,6 @@ $headerSpAnimationDuration: 0.7s;
       color: #333;
       font-size: 14px;
       font-weight: 500;
-    }
-  }
-
-  .spMenuWindowListWrapper {
-    overflow-y: scroll;
-    height: 100%;
-    margin-top: 16px;
-    &::-webkit-scrollbar {
-      display: none;
     }
   }
 
