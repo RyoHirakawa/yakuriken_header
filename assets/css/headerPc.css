@@ -125,3 +125,9 @@
 .headerPc .headerPc__navBottomListItem:hover {
   opacity: 0.6;
 }
+
+@media screen and (width <= 1140px) {
+  .headerPc {
+    display: none;
+  }
+}
