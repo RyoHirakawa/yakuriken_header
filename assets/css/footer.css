@@ -17,27 +17,27 @@
 }
 
 .spMenuWindowList {
-  width: 100%;
-  gap: 40px;
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  gap: 40px;
 }
 
 .footerTopContents {
-  gap: 20px;
-  flex: 1;
   display: flex;
   flex-direction: column;
+  flex: 1;
+  gap: 20px;
 }
 .footerTopContents.-otherLinks {
   gap: 32px;
 }
 
 .footerTopTitle .footerTopTitle__link {
-  font-weight: 700;
-  font-size: 1.8rem;
-  line-height: 25.2px;
   color: #1b8751;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 25.2px;
 }
 
 .footerTopTitleLabel {
@@ -45,12 +45,12 @@
 }
 
 .footerTopList {
-  gap: 16px;
-  padding: 0 12px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
+  padding: 0 12px;
+  gap: 16px;
 }
 .footerTopList .footerTopList__item {
   display: flex;
@@ -72,32 +72,32 @@
 }
 
 .footerBottom {
+  display: flex;
+  justify-content: center;
   width: 100%;
   padding: 24px 0;
   gap: 20px;
-  display: flex;
-  justify-content: center;
 }
 
 .footerBottomContainer {
-  width: 1040px;
-  gap: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 1040px;
+  gap: 20px;
 }
 .footerBottomContainer .footerBottom__text {
   font-size: 1.2rem;
   line-height: 15px;
 }
 
-@media screen and (max-width: 1140px) {
+@media screen and (width <= 1140px) {
   .footerReturnTop {
     position: static;
     width: 100%;
     height: 60px;
-    padding: 18px 0 0 0;
+    padding: 18px 0 0;
     background: #1b8751;
   }
   .footerReturnTop .footerReturnTop__upArrow {
@@ -105,32 +105,32 @@
     width: 10px;
     height: 10px;
     margin: 0 auto;
-    transform: rotate(45deg);
-    color: #333;
     border-top: 2px solid #fff;
     border-left: 2px solid #fff;
+    transform: rotate(45deg);
+    color: #333;
   }
   .footerReturnTop .footerReturnTop__text {
     display: block;
-    transform: translateY(calc(sqrt(50)px - 5px));
     width: 100%;
-    font-weight: 700;
-    font-size: 1.2rem;
-    line-height: 12px;
-    letter-spacing: 10%;
-    text-align: center;
+    transform: translateY(calc(sqrt(50)px - 5px));
     color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 12px;
+    text-align: center;
+    letter-spacing: 10%;
   }
   .footerTop {
     padding: 52px 32px;
     gap: 10px;
   }
   .footerTopContainer {
-    width: 100%;
-    gap: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
+    gap: 40px;
   }
   .spMenuWindowList {
     gap: 8px;
@@ -139,42 +139,42 @@
     justify-content: space-between;
   }
   .footerTopContents {
-    width: 100%;
-    gap: 8px;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    gap: 8px;
   }
   .footerTopContents.-otherLinks {
     gap: 8px;
   }
   .footerTopTitle {
-    border-bottom: 1px solid #ccc;
-    padding: 12px 0 13px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 12px 0 13px;
+    border-bottom: 1px solid #ccc;
   }
   .footerTopTitle .footerTopTitle__link {
-    font-weight: 700;
-    font-size: 1.6rem;
-    line-height: 22.4px;
     color: #1b8751;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 22.4px;
   }
   .footerTopTitleLabel {
+    display: block;
+    position: relative;
     width: 14px;
     height: 14px;
-    position: relative;
-    display: block;
   }
   .footerTopTitleLabel::before, .footerTopTitleLabel::after {
+    position: absolute;
+    top: 50%;
     width: 100%;
     height: 2px;
-    position: absolute;
-    content: "";
     background-color: #1b8751;
-    top: 50%;
     transform: rotate(0deg);
     transition: 0.5s;
+    content: "";
   }
   .footerTopTitleLabel::after {
     transform: rotate(-90deg);
@@ -185,7 +185,7 @@
   }
   .footerTopList {
     display: none;
-    gap: 0px;
+    gap: 0;
     width: 100%;
   }
   .footerTopList .footerTopList__item {
@@ -201,46 +201,46 @@
     display: block;
   }
   .footerTopOthers {
-    width: 100%;
-    gap: 16px;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    gap: 16px;
   }
   .footerTopOthers .footerTopOthers__text {
     font-size: 1.2rem;
     line-height: 18px;
   }
   .footerBottom {
+    display: flex;
+    justify-content: center;
     width: 100%;
     padding: 24px 32px;
     gap: 10px;
-    display: flex;
-    justify-content: center;
   }
   .footerBottomContainer {
-    width: 100%;
-    gap: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    gap: 20px;
   }
   .footerBottomContainer .footerBottom__text {
     font-size: 1rem;
     line-height: 15px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .footerTop {
     padding: 52px 32px;
     gap: 10px;
   }
   .footerTopContainer {
-    width: 100%;
-    gap: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
+    gap: 40px;
   }
   .footerTopMain {
     gap: 8px;
@@ -249,42 +249,42 @@
     justify-content: space-between;
   }
   .footerTopContents {
-    width: 100%;
-    gap: 8px;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    gap: 8px;
   }
   .footerTopContents.-otherLinks {
     gap: 8px;
   }
   .footerTopTitle {
-    border-bottom: 1px solid #ccc;
-    padding: 12px 0 13px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 12px 0 13px;
+    border-bottom: 1px solid #ccc;
   }
   .footerTopTitle .footerTopTitle__link {
-    font-weight: 700;
-    font-size: 1.6rem;
-    line-height: 22.4px;
     color: #1b8751;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 22.4px;
   }
   .footerTopTitleLabel {
+    display: block;
+    position: relative;
     width: 14px;
     height: 14px;
-    position: relative;
-    display: block;
   }
   .footerTopTitleLabel::before, .footerTopTitleLabel::after {
+    position: absolute;
+    top: 50%;
     width: 100%;
     height: 2px;
-    position: absolute;
-    content: "";
     background-color: #1b8751;
-    top: 50%;
     transform: rotate(0deg);
     transition: 0.5s;
+    content: "";
   }
   .footerTopTitleLabel::after {
     transform: rotate(-90deg);
@@ -295,7 +295,7 @@
   }
   .footerTopList {
     display: none;
-    gap: 0px;
+    gap: 0;
     width: 100%;
   }
   .footerTopList .footerTopList__item {
@@ -311,29 +311,29 @@
     display: block;
   }
   .footerTopOthers {
-    width: 100%;
-    gap: 16px;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    gap: 16px;
   }
   .footerTopOthers .footerTopOthers__text {
     font-size: 1.2rem;
     line-height: 18px;
   }
   .footerBottom {
+    display: flex;
+    justify-content: center;
     width: 100%;
     padding: 24px 32px;
     gap: 10px;
-    display: flex;
-    justify-content: center;
   }
   .footerBottomContainer {
-    width: 100%;
-    gap: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    gap: 20px;
   }
   .footerBottomContainer .footerBottom__text {
     font-size: 1rem;

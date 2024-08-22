@@ -154,8 +154,8 @@ button {
     width: 100%;
     height: 60px;
     padding: 0 16px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #fff;
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
     transition: 0.7s;
   }
   .headerSpTop .headerSpTop__logo {
@@ -170,10 +170,9 @@ button {
     gap: 16px;
     height: 17px;
   }
-  .headerSpTopList .headerSpTopList__item .headerSpTopList__item__link {
+  .headerSpTopListItem .headerSpTopListItem__link {
     color: #333;
     font-size: 12px;
-    font-family: "IBM Plex Sans JP";
     font-weight: 500;
   }
   .headerSp__bottom {
@@ -226,14 +225,52 @@ button {
     cursor: pointer;
   }
   .spMenu.--hidden .spMenuOverlay {
-    visibility: hidden;
+    display: none;
     opacity: 0;
   }
   .spMenu.--hidden .spMenuForeground {
-    visibility: hidden;
-    transform: translateY(100px);
-    transition: 0.7s;
-    opacity: 0;
+    -webkit-animation: SlideOut 0.7s forwards;
+            animation: SlideOut 0.7s forwards;
+  }
+  @-webkit-keyframes SlideOut {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100px);
+      display: none;
+      opacity: 0;
+    }
+  }
+  @keyframes SlideOut {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100px);
+      display: none;
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes SlideIn {
+    0% {
+      transform: translateY(100px);
+      display: none;
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes SlideIn {
+    0% {
+      transform: translateY(100px);
+      display: none;
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
   .spMenuOverlay {
     position: fixed;
@@ -243,6 +280,8 @@ button {
     background: rgba(37, 134, 81, 0.6);
   }
   .spMenuForeground {
+    -webkit-animation: SlideIn 0.7s forwards;
+            animation: SlideIn 0.7s forwards;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -255,10 +294,9 @@ button {
   .spMenuWindow {
     display: flex;
     flex-direction: column;
-    width: 90vw;
-    width: calc(100% - 140px);
-    height: 80vh;
-    margin-top: 5vh;
+    width: calc(100vw - 142px);
+    height: calc(100vh - 124px);
+    margin-top: 40px;
     padding: 20px 16px 32px;
     border-radius: 12px;
     background-color: #fff;
@@ -304,25 +342,11 @@ button {
     font-weight: 700;
   }
 }
-@-webkit-keyframes slideIn-Up {
-  0% {
-    transform: translateY(60px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes slideIn-Up {
-  0% {
-    transform: translateY(60px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 @media screen and (width <= 768px) {
   .spMenuWindow {
-    width: calc(100% - 60px);
+    width: calc(100vw - 62px);
+    height: calc(100vh - 124px);
+    margin-top: 32px;
   }
   .spMenuWindow .spMenuWindow__top .spMenuWindow__top__text {
     font-size: 12px;

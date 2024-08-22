@@ -1,7 +1,7 @@
 @use "foundation/_reset";
 @use "foundation/_base";
 
-$headerSpAnimationDuration: 0.7s;
+$header-sp-animation-duration: 0.7s;
 
 .headerSp {
   display: none;
@@ -22,10 +22,9 @@ $headerSpAnimationDuration: 0.7s;
     width: 100%;
     height: 60px;
     padding: 0 16px;
+    box-shadow: 0 0 8px 0 #0003;
     background-color: #fff;
-    box-shadow: 0px 0px 8px 0px #00000033;
-
-    transition: $headerSpAnimationDuration;
+    transition: $header-sp-animation-duration;
 
     .headerSpTop__logo {
       height: 35.38px;
@@ -33,7 +32,7 @@ $headerSpAnimationDuration: 0.7s;
 
     &.--hidden {
       transform: translateY(-100%);
-      transition: $headerSpAnimationDuration;
+      transition: $header-sp-animation-duration;
     }
   }
 
@@ -41,13 +40,13 @@ $headerSpAnimationDuration: 0.7s;
     display: flex;
     gap: 16px;
     height: 17px;
-    .headerSpTopList__item {
-      .headerSpTopList__item__link {
-        color: #333;
-        font-size: 12px;
-        font-family: "IBM Plex Sans JP";
-        font-weight: 500;
-      }
+  }
+
+  .headerSpTopListItem {
+    .headerSpTopListItem__link {
+      color: #333;
+      font-size: 12px;
+      font-weight: 500;
     }
   }
 
@@ -60,11 +59,11 @@ $headerSpAnimationDuration: 0.7s;
     height: 64px;
     box-shadow: 0 -1px 5px rgb(0 0 0 / 0.2);
     background-color: #fff;
-    transition: $headerSpAnimationDuration;
+    transition: $header-sp-animation-duration;
 
     &.--hidden {
       transform: translateY(100%);
-      transition: $headerSpAnimationDuration;
+      transition: $header-sp-animation-duration;
     }
   }
 
@@ -113,16 +112,34 @@ $headerSpAnimationDuration: 0.7s;
   .spMenu {
     &.--hidden {
       .spMenuOverlay {
-        visibility: hidden;
+        display: none;
         opacity: 0;
       }
 
       .spMenuForeground {
-        visibility: hidden;
-        transform: translateY(100px);
-        transition: $headerSpAnimationDuration;
-        opacity: 0;
+        animation: SlideOut $header-sp-animation-duration forwards;
       }
+    }
+  }
+
+  @keyframes SlideOut {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100px);
+      display: none;
+      opacity: 0;
+    }
+  }
+  @keyframes SlideIn {
+    0% {
+      transform: translateY(100px);
+      display: none;
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
     }
   }
 
@@ -135,6 +152,7 @@ $headerSpAnimationDuration: 0.7s;
   }
 
   .spMenuForeground {
+    animation: SlideIn $header-sp-animation-duration forwards;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,16 +160,15 @@ $headerSpAnimationDuration: 0.7s;
     z-index: 100;
     width: 100%;
     height: 100%;
-    transition: $headerSpAnimationDuration;
+    transition: $header-sp-animation-duration;
   }
 
   .spMenuWindow {
     display: flex;
     flex-direction: column;
-    width: 90vw;
-    width: calc(100% - 140px);
-    height: 80vh;
-    margin-top: 5vh;
+    width: calc(100vw - 142px);
+    height: calc(100vh - 124px);
+    margin-top: 40px;
     padding: 20px 16px 32px;
     border-radius: 12px;
     background-color: #fff;
@@ -203,21 +220,12 @@ $headerSpAnimationDuration: 0.7s;
   }
 }
 
-@keyframes slideIn-Up {
-  0% {
-    transform: translateY(60px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
 // スマホ版
 @media screen and (width <= 768px) {
   .spMenuWindow {
-    width: calc(100% - 60px);
-
+    width: calc(100vw - 62px);
+    height: calc(100vh - 124px);
+    margin-top: 32px;
     .spMenuWindow__top {
       .spMenuWindow__top__text {
         font-size: 12px;
