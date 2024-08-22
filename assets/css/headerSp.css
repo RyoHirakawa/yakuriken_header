@@ -1,142 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
-
-html {
-  box-sizing: normal;
-}
-
-body {
-  margin: 0;
-}
-
-h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-}
-
-h3 {
-  font-size: 1.17rem;
-}
-
-h4 {
-  font-size: 1rem;
-}
-
-h5 {
-  font-size: 0.83rem;
-}
-
-h6 {
-  font-size: 0.67rem;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-pre {
-  white-space: pre-wrap;
-}
-
-hr {
-  overflow: visible;
-  height: 0;
-  border-width: 1px 0 0;
-  border-style: solid;
-  color: inherit;
-}
-
-audio,
-canvas,
-embed,
-iframe,
-img,
-object,
-svg,
-video {
-  display: block;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-canvas,
-img,
-svg,
-video {
-  height: auto;
-}
-
-audio {
-  width: 100%;
-}
-
-img {
-  border-style: none;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-svg {
-  overflow: hidden;
-}
-
-article,
-aside,
-figcaption,
-figure,
-footer,
-header,
-main,
-nav,
-section {
-  display: block;
-}
-
-[type=checkbox],
-[type=radio] {
-  padding: 0;
-  box-sizing: border-box;
-}
-
-button {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  color: inherit;
-  font-style: inherit;
-  text-align: inherit;
-  vertical-align: middle;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
-* {
-  color: #333;
-  font-size: 62.5%;
-  font-family: "IBM Plex Sans JP", sans-serif;
-}
-
 .headerSp {
   display: none;
 }
@@ -154,7 +15,7 @@ button {
     width: 100%;
     height: 60px;
     padding: 0 16px;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 8px 0 rgb(0 0 0 / 0.2);
     background-color: #fff;
     transition: 0.7s;
   }
@@ -172,7 +33,7 @@ button {
   }
   .headerSpTopListItem .headerSpTopListItem__link {
     color: #333;
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: 500;
   }
   .headerSp__bottom {
@@ -182,7 +43,7 @@ button {
     z-index: 500;
     width: 100%;
     height: 64px;
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -1px 5px rgb(0 0 0 / 0.2);
     background-color: #fff;
     transition: 0.7s;
   }
@@ -215,8 +76,9 @@ button {
   .headerSpBottomLink .headerSpBottomLink__text {
     margin: 0 auto;
     color: #333;
-    font-size: 10px;
+    font-size: 1rem;
     font-weight: 700;
+    line-height: 1.4;
   }
   .headerSpBottomLink .headerSpBottomLink__text.--white {
     color: #fff;
@@ -229,43 +91,47 @@ button {
     opacity: 0;
   }
   .spMenu.--hidden .spMenuForeground {
-    -webkit-animation: SlideOut 0.7s forwards;
-            animation: SlideOut 0.7s forwards;
+    animation: slide-out 0.7s forwards;
+            animation: slide-out 0.7s forwards;
   }
-  @-webkit-keyframes SlideOut {
+
+  @keyframes slide-out {
     0% {
       transform: translateY(0);
     }
     100% {
-      transform: translateY(100px);
       display: none;
+      transform: translateY(100px);
       opacity: 0;
     }
   }
-  @keyframes SlideOut {
+
+  @keyframes slide-out {
     0% {
       transform: translateY(0);
     }
     100% {
-      transform: translateY(100px);
       display: none;
+      transform: translateY(100px);
       opacity: 0;
     }
   }
-  @-webkit-keyframes SlideIn {
+
+  @keyframes slide-in {
     0% {
-      transform: translateY(100px);
       display: none;
+      transform: translateY(100px);
       opacity: 0;
     }
     100% {
       transform: translateY(0);
     }
   }
-  @keyframes SlideIn {
+
+  @keyframes slide-in {
     0% {
-      transform: translateY(100px);
       display: none;
+      transform: translateY(100px);
       opacity: 0;
     }
     100% {
@@ -277,19 +143,18 @@ button {
     z-index: 100;
     width: 100%;
     height: 100%;
-    background: rgba(37, 134, 81, 0.6);
+    background: rgb(37 134 81 / 0.6);
   }
   .spMenuForeground {
-    -webkit-animation: SlideIn 0.7s forwards;
-            animation: SlideIn 0.7s forwards;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: fixed;
-    z-index: 100;
+    z-index: 200;
     width: 100%;
     height: 100%;
-    transition: 0.7s;
+    animation: slide-in 0.7s forwards;
+            animation: slide-in 0.7s forwards;
   }
   .spMenuWindow {
     display: flex;
@@ -316,8 +181,94 @@ button {
     display: block;
     margin-left: 16px;
     color: #333;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 500;
+  }
+  .modalListContainer {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: scroll;
+    height: 100%;
+    margin-top: 16px;
+  }
+  .modalListContainer::-webkit-scrollbar {
+    display: none;
+  }
+  .modalList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    gap: 8px;
+  }
+  .modalListContents {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+  .modalListTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+  }
+  .modalListTitle .modalListTitle__link {
+    padding: 16px;
+    color: #1b8751;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 22.4px;
+  }
+  .modalListTitle .modalListTitle__pulsButtonLabel {
+    display: block;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+  }
+  .modalListTitle .modalListTitle__pulsButtonLabel::before, .modalListTitle .modalListTitle__pulsButtonLabel::after {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: #1b8751;
+    transform: rotate(0deg);
+    transition: 0.5s;
+    content: "";
+  }
+  .modalListTitle .modalListTitle__pulsButtonLabel::after {
+    transform: rotate(-90deg);
+  }
+  .modalListTitle .modalListTitle__pulsButtonLabel.-open::after {
+    transform: rotate(0);
+    transition: 0.5s;
+  }
+  .modalSubList {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 12px;
+    gap: 0;
+  }
+  .modalSubList .modalSubListItem {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px 16px;
+    gap: 10px;
+  }
+  .modalSubList .modalSubListItem__link {
+    font-size: 1.4rem;
+    line-height: 19.6px;
+  }
+  .modalSubList.-open {
+    display: block;
   }
   .spMenuCloseButton {
     display: flex;
@@ -326,7 +277,7 @@ button {
     align-items: center;
     width: 56px;
     height: 56px;
-    margin: auto;
+    margin-top: 8px;
     border-radius: 50%;
     background-color: #fff;
     text-align: center;
@@ -338,17 +289,21 @@ button {
   }
   .spMenuCloseButton .spMenuCloseButton__text {
     display: block;
-    font-size: 10px;
+    font-size: 1rem;
     font-weight: 700;
   }
 }
-@media screen and (width <= 768px) {
+
+@media screen and (width <= 767px) {
   .spMenuWindow {
     width: calc(100vw - 62px);
     height: calc(100vh - 124px);
     margin-top: 32px;
   }
   .spMenuWindow .spMenuWindow__top .spMenuWindow__top__text {
-    font-size: 12px;
+    font-size: 1.2rem;
+  }
+  .spMenuCloseButton {
+    margin: auto;
   }
 }

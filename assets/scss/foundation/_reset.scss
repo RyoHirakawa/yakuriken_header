@@ -1,66 +1,66 @@
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 *,
 ::after,
 ::before {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-	box-sizing: normal
+  box-sizing: normal;
 }
 
 body {
-	margin: 0
+  margin: 0;
 }
 
 h1 {
-	margin: 0;
-	font-size: 2rem;
+  margin: 0;
+  font-size: 2rem;
 }
 
 h2 {
-	font-size: 1.5rem
+  font-size: 1.5rem;
 }
 
 h3 {
-	font-size: 1.17rem
+  font-size: 1.17rem;
 }
 
 h4 {
-	font-size: 1rem
+  font-size: 1rem;
 }
 
 h5 {
-	font-size: .83rem
+  font-size: 0.83rem;
 }
 
 h6 {
-	font-size: .67rem
+  font-size: 0.67rem;
 }
 
 ul,
 ol {
-	list-style: none
+  list-style: none;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 pre {
-	white-space: pre-wrap
+  white-space: pre-wrap;
 }
 
 hr {
-	overflow: visible;
-	height: 0;
-	border-width: 1px 0 0;
-	border-style: solid;
-	color: inherit
+  overflow: visible;
+  height: 0;
+  border-width: 1px 0 0;
+  border-style: solid;
+  color: inherit;
 }
 
 audio,
@@ -71,30 +71,30 @@ img,
 object,
 svg,
 video {
-	display: block;
-	max-width: 100%;
-	margin: 0;
-	padding: 0
+  display: block;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 canvas,
 img,
 svg,
 video {
-	height: auto
+  height: auto;
 }
 
 audio {
-	width: 100%
+  width: 100%;
 }
 
 img {
-	border-style: none;
-	backface-visibility: hidden;
+  border-style: none;
+  backface-visibility: hidden;
 }
 
 svg {
-	overflow: hidden
+  overflow: hidden;
 }
 
 article,
@@ -106,24 +106,24 @@ header,
 main,
 nav,
 section {
-	display: block
+  display: block;
 }
 
 [type="checkbox"],
 [type="radio"] {
-	padding: 0;
-	box-sizing: border-box
+  padding: 0;
+  box-sizing: border-box;
 }
 
 button {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	border-radius: 0;
-	background: transparent;
-	color: inherit;
-	font-style: inherit;
-	text-align: inherit;
-	vertical-align: middle;
-	appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font-style: inherit;
+  text-align: inherit;
+  vertical-align: middle;
+  appearance: none;
 }

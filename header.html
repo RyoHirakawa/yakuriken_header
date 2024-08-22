@@ -3,11 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SPヘッダー</title>
+    <title>ヘッダー</title>
     <meta name="discription" content="" />
-    <link rel="stylesheet" href="/assets/css/headerPc.css" media="screen" />
-    <link rel="stylesheet" href="/assets/css/headerSp.css" media="screen" />
-    <link rel="stylesheet" href="/assets/css/footer.css" media="screen" />
+
+    <link rel="stylesheet" href="assets/css/style.css" media="screen" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,14 +22,14 @@
         <div class="headerPc__Wrap">
           <div class="headerPc__logo">
             <img
-              class="headerPc__logoImg"
+              class="headerPc__logoImage"
               src="assets/images/logo_company.png"
               alt="会社ロゴ"
             />
             <p class="headerPc__logoText">株式会社東北薬理研</p>
           </div>
           <div class="headerPc__nav">
-            <nav class="header__navTop">
+            <nav class="headerPc__navTop">
               <ul class="headerPc__navTopList">
                 <li>
                   <div class="headerPc__navTopLeft">
@@ -49,7 +48,7 @@
                 </li>
               </ul>
             </nav>
-            <nav class="header_navBottom">
+            <nav class="headerPc__navBottom">
               <ul class="headerPc__navBottomList">
                 <li class="headerPc__navBottomListColumnItem">
                   <a class="headerPc__navBottomListItem" href="">サービス</a>
@@ -165,83 +164,85 @@
                 <div class="spMenuWindowCompany__text">株式会社東北薬理研</div>
               </div>
 
-              <div class="spMenuWindowListContainer">
-                <div class="spMenuWindowList">
-                  <div class="footerTopContents">
-                    <div class="footerTopTitle">
-                      <a href="#" class="footerTopTitle__link">サービス</a>
+              <div class="modalListContainer">
+                <div class="modalList">
+                  <div class="modalListContents">
+                    <div class="modalListTitle">
+                      <a href="#" class="modalListTitle__link">サービス</a>
                       <label
-                        for="js-footerServiceList"
-                        class="footerTopTitleLabel"
+                        for="js-modalServiceList"
+                        class="modalListTitle__pulsButtonLabel"
                       ></label>
                     </div>
-                    <ul id="js-footerServiceList" class="footerTopList">
-                      <li class="footerTopList__item">
-                        <a href="#" class="footerTopList__link"
+                    <ul id="js-modalServiceList" class="modalSubList">
+                      <li class="modalSubListItem">
+                        <a href="#" class="modalSubListItem__link"
                           >東北薬理研の強み</a
                         >
                       </li>
-                      <li class="footerTopList__item">
-                        <a href="#" class="footerTopList__link"
+                      <li class="modalSubListItem">
+                        <a href="#" class="modalSubListItem__link"
                           >安心を支えるプロセス</a
                         >
                       </li>
-                      <li class="footerTopList__item">
-                        <a href="#" class="footerTopList__link">治験とは</a>
+                      <li class="modalSubListItem">
+                        <a href="#" class="modalSubListItem__link">治験とは</a>
                       </li>
-                      <li class="footerTopList__item">
-                        <a href="#" class="footerTopList__link">医療機関向け</a>
+                      <li class="modalSubListItem">
+                        <a href="#" class="modalSubListItem__link"
+                          >医療機関向け</a
+                        >
                       </li>
-                      <li class="footerTopList__item">
-                        <a href="#" class="footerTopList__link"
+                      <li class="modalSubListItem">
+                        <a href="#" class="modalSubListItem__link"
                           >治験依頼者の方へ</a
                         >
                       </li>
                     </ul>
                   </div>
-                  <div class="footerTopContents">
-                    <div class="footerTopTitle">
-                      <a href="#" class="footerTopTitle__link">治験実績</a>
+                  <div class="modalListContents">
+                    <div class="modalListTitle">
+                      <a href="#" class="modalListTitle__link">治験実績</a>
                     </div>
                   </div>
-                  <div class="footerTopContents">
-                    <div class="footerTopTitle">
-                      <a href="#" class="footerTopTitle__link">企業情報</a>
+                  <div class="modalListContents">
+                    <div class="modalListTitle">
+                      <a href="#" class="modalListTitle__link">企業情報</a>
                       <label
-                        for="js-footerInformationList"
-                        class="footerTopTitleLabel"
+                        for="js-modalInformationList"
+                        class="modalListTitle__pulsButtonLabel"
                       ></label>
                     </div>
-                    <ul id="js-footerInformationList" class="footerTopList">
-                      <li class="footerTopList__item">
-                        <a class="footerTopList__link">会社概要</a>
+                    <ul id="js-modalInformationList" class="modalSubList">
+                      <li class="modalSubListItem">
+                        <a class="modalSubListItem__link">会社概要</a>
                       </li>
-                      <li class="footerTopList__item">
-                        <a class="footerTopList__link">企業理念</a>
+                      <li class="modalSubListItem">
+                        <a class="modalSubListItem__link">企業理念</a>
                       </li>
-                      <li class="footerTopList__item">
-                        <a class="footerTopList__link">各種リンク</a>
+                      <li class="modalSubListItem">
+                        <a class="modalSubListItem__link">各種リンク</a>
                       </li>
                     </ul>
                   </div>
-                  <div class="footerTopContents">
-                    <div class="footerTopTitle">
-                      <a href="#" class="footerTopTitle__link">お知らせ</a>
+                  <div class="modalListContents">
+                    <div class="modalListTitle">
+                      <a href="#" class="modalListTitle__link">お知らせ</a>
                     </div>
                   </div>
-                  <div class="footerTopContents">
-                    <div class="footerTopTitle">
-                      <a href="#" class="footerTopTitle__link">採用情報</a>
+                  <div class="modalListContents">
+                    <div class="modalListTitle">
+                      <a href="#" class="modalListTitle__link">採用情報</a>
                     </div>
                   </div>
-                  <div class="footerTopContents">
-                    <div class="footerTopTitle">
-                      <a href="#" class="footerTopTitle__link">お問い合わせ</a>
+                  <div class="modalListContents">
+                    <div class="modalListTitle">
+                      <a href="#" class="modalListTitle__link">お問い合わせ</a>
                     </div>
                   </div>
-                  <div class="footerTopContents">
-                    <div class="footerTopTitle">
-                      <a href="#" class="footerTopTitle__link"
+                  <div class="modalListContents">
+                    <div class="modalListTitle">
+                      <a href="#" class="modalListTitle__link"
                         >プライバシーポリシー</a
                       >
                     </div>

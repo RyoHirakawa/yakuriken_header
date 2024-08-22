@@ -8,6 +8,7 @@ function openSpMenu() {
   const spMenu = document.querySelector("#js-spMenu");
   spMenu.classList.remove("--hidden");
 }
+
 function closeSpMenu() {
   const headerSp__top = document.querySelector("#js-headerSp__top");
   headerSp__top.classList.remove("--hidden");

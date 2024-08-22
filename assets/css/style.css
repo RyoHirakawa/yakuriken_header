@@ -90,7 +90,7 @@ audio {
 
 img {
   border-style: none;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 svg {
@@ -125,7 +125,7 @@ button {
   font-style: inherit;
   text-align: inherit;
   vertical-align: middle;
-  appearance: none;
+          appearance: none;
 }
 
 * {
@@ -134,6 +134,446 @@ button {
   font-family: "IBM Plex Sans JP", sans-serif;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+.headerPc {
+  display: flex;
+  align-items: center;
+  height: 110px;
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 0.2);
+  text-wrap: nowrap;
+}
+.headerPc .headerPc__Wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 36px;
+}
+.headerPc .headerPc__logo {
+  display: flex;
+  align-items: center;
+  height: 69.54px;
+  gap: 12px;
+}
+.headerPc .headerPc__logo .headerPc__logoImage {
+  width: 140px;
+}
+.headerPc .headerPc__logo .headerPc__logoText {
+  color: #333;
+  font-size: 1.4rem;
+  font-family: "IBM Plex Sans JP", sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+}
+.headerPc .headerPc__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 516px;
+  height: 72px;
+}
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopList {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+  list-style: none;
+}
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopLeft {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+}
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopLeft .headerPc__navTopLeftButton {
+  padding: 7px 16px;
+  border: #258651 1px solid;
+  border-radius: 22px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  color: #1b8751;
+  font-size: 1.3rem;
+  font-family: "IBM Plex Sans JP", sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopLeft .headerPc__navTopLeftButton:hover {
+  background-color: #258651;
+  color: #fff;
+}
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopRight .headerPc__navTopRightButton {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  height: 32px;
+  padding: 0 28px;
+  border: #258651 1px solid;
+  border-radius: 22px;
+  background-color: #258651;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+  font-size: 1.4rem;
+  font-family: "IBM Plex Sans JP", sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopRight .headerPc__navTopRightButton::after {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  width: 5px;
+  height: 5px;
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+  transform: rotate(45deg);
+  transition: all 0.3s ease-in-out;
+  content: "";
+}
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopRight .headerPc__navTopRightButton:hover {
+  background-color: #fff;
+  color: #258651;
+  font-size: 1.4rem;
+  font-family: "IBM Plex Sans JP", sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopRight .headerPc__navTopRightButton:hover::after {
+  border-color: #258651;
+}
+.headerPc .headerPc__nav .headerPc__navBottomList {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 44px;
+}
+.headerPc .headerPc__nav .headerPc__navBottomListItem {
+  transition: all 0.3s ease-in-out;
+  color: #333;
+  font-size: 18px;
+  font-family: "IBM Plex Sans JP", sans-serif;
+  font-weight: 700;
+  line-height: 25.2px;
+  text-decoration: none;
+}
+.headerPc .headerPc__nav .headerPc__navBottomListItem:hover {
+  opacity: 0.6;
+}
+
+@media screen and (width <= 1140px) {
+  .headerPc {
+    display: none;
+  }
+}
 .headerSp {
   display: none;
+}
+
+@media screen and (width <= 1140px) {
+  .headerSp {
+    display: block;
+  }
+  .headerSpTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 500;
+    width: 100%;
+    height: 60px;
+    padding: 0 16px;
+    box-shadow: 0 0 8px 0 rgb(0 0 0 / 0.2);
+    background-color: #fff;
+    transition: 0.7s;
+  }
+  .headerSpTop .headerSpTop__logo {
+    height: 35.38px;
+  }
+  .headerSpTop.--hidden {
+    transform: translateY(-100%);
+    transition: 0.7s;
+  }
+  .headerSpTopList {
+    display: flex;
+    gap: 16px;
+    height: 17px;
+  }
+  .headerSpTopListItem .headerSpTopListItem__link {
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .headerSp__bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    height: 64px;
+    box-shadow: 0 -1px 5px rgb(0 0 0 / 0.2);
+    background-color: #fff;
+    transition: 0.7s;
+  }
+  .headerSp__bottom.--hidden {
+    transform: translateY(100%);
+    transition: 0.7s;
+  }
+  .headerSpBottomList {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 100%;
+  }
+  .headerSpBottomList .headerSpBottomList__item:not(:first-child, :last-child) {
+    border-left: solid #ccc 1px;
+  }
+  .headerSpBottomList .headerSpBottomList__item.--bgGreen {
+    background-color: #1b8751;
+  }
+  .headerSpBottomLink {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  .headerSpBottomLink .headerSpBottomLink__icon {
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+  }
+  .headerSpBottomLink .headerSpBottomLink__text {
+    margin: 0 auto;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  .headerSpBottomLink .headerSpBottomLink__text.--white {
+    color: #fff;
+  }
+  .headerSpBottomLink.--pointer {
+    cursor: pointer;
+  }
+  .spMenu.--hidden .spMenuOverlay {
+    display: none;
+    opacity: 0;
+  }
+  .spMenu.--hidden .spMenuForeground {
+            animation: slide-out 0.7s forwards;
+  }
+
+  @keyframes slide-out {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      display: none;
+      transform: translateY(100px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-out {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      display: none;
+      transform: translateY(100px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-in {
+    0% {
+      display: none;
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-in {
+    0% {
+      display: none;
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .spMenuOverlay {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: rgb(37 134 81 / 0.6);
+  }
+  .spMenuForeground {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+            animation: slide-in 0.7s forwards;
+  }
+  .spMenuWindow {
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw - 142px);
+    height: calc(100vh - 124px);
+    margin-top: 40px;
+    padding: 20px 16px 32px;
+    border-radius: 12px;
+    background-color: #fff;
+  }
+  .spMenuWindowCompany {
+    display: flex;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+  }
+  .spMenuWindowCompany .spMenuWindowCompany__logo {
+    display: block;
+    width: 100px;
+    height: 35.38px;
+  }
+  .spMenuWindowCompany .spMenuWindowCompany__text {
+    display: block;
+    margin-left: 16px;
+    color: #333;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  .modalListContainer {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: scroll;
+    height: 100%;
+    margin-top: 16px;
+  }
+  .modalListContainer::-webkit-scrollbar {
+    display: none;
+  }
+  .modalList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    gap: 8px;
+  }
+  .modalListContents {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+  .modalListTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+  }
+  .modalListTitle .modalListTitle__link {
+    padding: 16px;
+    color: #1b8751;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 22.4px;
+  }
+  .modalListTitle .modalListTitle__pulsButtonLabel {
+    display: block;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+  }
+  .modalListTitle .modalListTitle__pulsButtonLabel::before, .modalListTitle .modalListTitle__pulsButtonLabel::after {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: #1b8751;
+    transform: rotate(0deg);
+    transition: 0.5s;
+    content: "";
+  }
+  .modalListTitle .modalListTitle__pulsButtonLabel::after {
+    transform: rotate(-90deg);
+  }
+  .modalListTitle .modalListTitle__pulsButtonLabel.-open::after {
+    transform: rotate(0);
+    transition: 0.5s;
+  }
+  .modalSubList {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 12px;
+    gap: 0;
+  }
+  .modalSubList .modalSubListItem {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px 16px;
+    gap: 10px;
+  }
+  .modalSubList .modalSubListItem__link {
+    font-size: 1.4rem;
+    line-height: 19.6px;
+  }
+  .modalSubList.-open {
+    display: block;
+  }
+  .spMenuCloseButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    margin-top: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+  }
+  .spMenuCloseButton .spMenuCloseButton__icon {
+    width: 32px;
+    height: 32px;
+  }
+  .spMenuCloseButton .spMenuCloseButton__text {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
+
+@media screen and (width <= 768px) {
+  .spMenuWindow {
+    width: calc(100vw - 62px);
+    height: calc(100vh - 124px);
+    margin-top: 32px;
+  }
+  .spMenuWindow .spMenuWindow__top .spMenuWindow__top__text {
+    font-size: 1.2rem;
+  }
+  .spMenuCloseButton {
+    margin: auto;
+  }
 }
