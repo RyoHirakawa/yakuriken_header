@@ -81,6 +81,6 @@ class FooterAccordion {
   }
 }
 window.addEventListener("DOMContentLoaded", () => {
-  footerService = new FooterAccordion("js-footerServiceList");
-  footerService = new FooterAccordion("js-footerInformationList");
+  modalService = new FooterAccordion("js-modalServiceList");
+  modalInformation = new FooterAccordion("js-modalInformationList");
 });

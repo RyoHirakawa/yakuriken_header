@@ -1,0 +1,335 @@
+$header-sp-animation-duration: 0.7s;
+
+.headerSp {
+  display: none;
+}
+
+// スマホ&タブレット共通
+@media screen and (width <=1140px) {
+  .headerSp {
+    display: block;
+  }
+
+  .headerSpTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 500;
+    width: 100%;
+    height: 60px;
+    padding: 0 16px;
+    box-shadow: 0 0 8px 0 #0003;
+    background-color: #fff;
+    transition: $header-sp-animation-duration;
+
+    .headerSpTop__logo {
+      height: 35.38px;
+    }
+
+    &.--hidden {
+      transform: translateY(-100%);
+      transition: $header-sp-animation-duration;
+    }
+  }
+
+  .headerSpTopList {
+    display: flex;
+    gap: 16px;
+    height: 17px;
+  }
+
+  .headerSpTopListItem {
+    .headerSpTopListItem__link {
+      color: #333;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  }
+
+  .headerSp__bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    height: 64px;
+    box-shadow: 0 -1px 5px rgb(0 0 0 / 0.2);
+    background-color: #fff;
+    transition: $header-sp-animation-duration;
+
+    &.--hidden {
+      transform: translateY(100%);
+      transition: $header-sp-animation-duration;
+    }
+  }
+
+  .headerSpBottomList {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 100%;
+    .headerSpBottomList__item {
+      &:not(:first-child, :last-child) {
+        border-left: solid #ccc 1px;
+      }
+
+      &.--bgGreen {
+        background-color: #1b8751;
+      }
+    }
+  }
+
+  .headerSpBottomLink {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    .headerSpBottomLink__icon {
+      width: 32px;
+      height: 32px;
+      margin: 0 auto;
+    }
+
+    .headerSpBottomLink__text {
+      margin: 0 auto;
+      color: #333;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.4;
+      &.--white {
+        color: #fff;
+      }
+    }
+
+    &.--pointer {
+      cursor: pointer;
+    }
+  }
+
+  .spMenu {
+    &.--hidden {
+      .spMenuOverlay {
+        display: none;
+        opacity: 0;
+      }
+
+      .spMenuForeground {
+        animation: slide-out $header-sp-animation-duration forwards;
+      }
+    }
+  }
+
+  @keyframes slide-out {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      display: none;
+      transform: translateY(100px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-in {
+    0% {
+      display: none;
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .spMenuOverlay {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: rgb(37 134 81 / 0.6);
+  }
+
+  .spMenuForeground {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    animation: slide-in $header-sp-animation-duration forwards;
+  }
+
+  .spMenuWindow {
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw - 142px);
+    height: calc(100vh - 124px);
+    margin-top: 40px;
+    padding: 20px 16px 32px;
+    border-radius: 12px;
+    background-color: #fff;
+  }
+
+  .spMenuWindowCompany {
+    display: flex;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+
+    .spMenuWindowCompany__logo {
+      display: block;
+      width: 100px;
+      height: 35.38px;
+    }
+
+    .spMenuWindowCompany__text {
+      display: block;
+      margin-left: 16px;
+      color: #333;
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+  }
+
+  // footer埋め込み部分
+  .modalListContainer {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: scroll;
+    height: 100%;
+    margin-top: 16px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .modalList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .modalListContents {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .modalListTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    .modalListTitle__link {
+      padding: 16px;
+      color: #1b8751;
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 22.4px;
+    }
+
+    .modalListTitle__pulsButtonLabel {
+      display: block;
+      position: relative;
+      width: 14px;
+      height: 14px;
+      margin-right: 10px;
+      &::before,
+      &::after {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 2px;
+        background-color: #1b8751;
+        transform: rotate(0deg);
+        transition: 0.5s;
+        content: "";
+      }
+      &::after {
+        transform: rotate(-90deg);
+      }
+      &.-open {
+        &::after {
+          transform: rotate(0);
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+
+  .modalSubList {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 12px;
+    gap: 0;
+
+    .modalSubListItem {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 12px 16px;
+      gap: 10px;
+    }
+    .modalSubListItem__link {
+      font-size: 1.4rem;
+      line-height: 19.6px;
+    }
+    &.-open {
+      display: block;
+    }
+  }
+
+  // footer埋め込み部分終わり
+
+  .spMenuCloseButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    margin-top: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+
+    .spMenuCloseButton__icon {
+      width: 32px;
+      height: 32px;
+    }
+    .spMenuCloseButton__text {
+      display: block;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
+}
+
+// スマホ版
+@media screen and (width <= 767px) {
+  .spMenuWindow {
+    width: calc(100vw - 62px);
+    height: calc(100vh - 124px);
+    margin-top: 32px;
+    .spMenuWindow__top {
+      .spMenuWindow__top__text {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .spMenuCloseButton {
+    margin: auto;
+  }
+}
