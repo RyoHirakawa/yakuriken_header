@@ -1,15 +1,19 @@
 function openSpMenu() {
-  const headerSp__top = document.querySelector("#js-headerSp__top");
-  headerSp__top.classList.add("--hidden");
+  const spMenuOpenButton = document.querySelector("#js-spMenuOpenButton");
 
-  const headerSp__bottom = document.querySelector("#js-headerSp__bottom");
-  headerSp__bottom.classList.add("--hidden");
+  if (spMenuOpenButton.classList.contains("js-spMenuOpenButton-active")) {
+    const headerSp__top = document.querySelector("#js-headerSp__top");
+    headerSp__top.classList.add("--hidden");
 
-  const spMenuForeground = document.querySelector("#js-spMenuForeground");
-  spMenuForeground.style.display = "flex";
+    const headerSp__bottom = document.querySelector("#js-headerSp__bottom");
+    headerSp__bottom.classList.add("--hidden");
 
-  const spMenu = document.querySelector("#js-spMenu");
-  spMenu.classList.remove("--hidden");
+    const spMenuForeground = document.querySelector("#js-spMenuForeground");
+    spMenuForeground.style.display = "flex";
+
+    const spMenu = document.querySelector("#js-spMenu");
+    spMenu.classList.remove("--hidden");
+  }
 }
 
 function closeSpMenu() {
@@ -23,8 +27,11 @@ function closeSpMenu() {
   spMenu.classList.add("--hidden");
 
   const spMenuForeground = document.querySelector("#js-spMenuForeground");
+  const spMenuOpenButton = document.querySelector("#js-spMenuOpenButton");
+  spMenuOpenButton.classList.remove("js-spMenuOpenButton-active");
   setTimeout(() => {
     spMenuForeground.style.display = "none";
+    spMenuOpenButton.classList.add("js-spMenuOpenButton-active");
   }, 700);
 }
 
