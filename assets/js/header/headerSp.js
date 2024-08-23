@@ -5,6 +5,9 @@ function openSpMenu() {
   const headerSp__bottom = document.querySelector("#js-headerSp__bottom");
   headerSp__bottom.classList.add("--hidden");
 
+  const spMenuForeground = document.querySelector("#js-spMenuForeground");
+  spMenuForeground.style.display = "flex";
+
   const spMenu = document.querySelector("#js-spMenu");
   spMenu.classList.remove("--hidden");
 }
@@ -18,6 +21,11 @@ function closeSpMenu() {
 
   const spMenu = document.querySelector("#js-spMenu");
   spMenu.classList.add("--hidden");
+
+  const spMenuForeground = document.querySelector("#js-spMenuForeground");
+  setTimeout(() => {
+    spMenuForeground.style.display = "none";
+  }, 700);
 }
 
 const spMenuOpenButton = document.querySelector("#js-spMenuOpenButton");
