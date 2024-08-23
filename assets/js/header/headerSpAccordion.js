@@ -1,3 +1,6 @@
+const breakPoint = 1140;
+const accordionOpenTimeMs = 120;
+const accordionCloseTimeMs = 120;
 class FooterAccordion {
   static instances = [];
   label;
@@ -13,7 +16,7 @@ class FooterAccordion {
     FooterAccordion.instances.push(this);
   }
   optimazeByWindowSize() {
-    if (window.innerWidth > 1140) {
+    if (window.innerWidth > breakPoint) {
       this.list.style.height = 0;
       this.list.style.height = `${this.list.scrollHeight}px`;
     } else {
@@ -25,16 +28,16 @@ class FooterAccordion {
   }
   toggleList() {
     if (this.isActive == true) {
-      this.closeList(this.list);
+      this.closeList(accordionCloseTimeMs);
     } else {
-      this.openList(this.list);
+      this.openList(accordionOpenTimeMs);
     }
     this.isActive = !this.isActive;
   }
-  openList() {
+  openList(animationMs) {
     FooterAccordion.instances.forEach((instance) => {
       if (instance.isActive && instance !== this) {
-        instance.closeList();
+        instance.closeList(accordionCloseTimeMs);
         instance.isActive = false;
       }
     });
@@ -43,12 +46,11 @@ class FooterAccordion {
     this.list.style.height = `${0}px`;
     this.list.offsetHeight; //トリガーリフロー
     const fullHeight = this.list.scrollHeight;
-    const animationDuration = 240;
     let startTime = null;
     const animate = (currentTime) => {
       if (!startTime) startTime = currentTime;
       const elapsedTime = currentTime - startTime;
-      const progress = Math.min(elapsedTime / animationDuration, 1);
+      const progress = Math.min(elapsedTime / animationMs, 1);
       this.list.style.height = `${fullHeight * progress}px`;
       if (progress < 1) {
         requestAnimationFrame(animate);
@@ -58,12 +60,11 @@ class FooterAccordion {
     };
     requestAnimationFrame(animate);
   }
-  closeList() {
+  closeList(animationMs) {
     this.label.classList.remove("-open");
     this.list.style.height = this.list.scrollHeight;
     this.list.offsetHeight; // トリガーリフロー
     const fullHeight = this.list.scrollHeight;
-    const animationMs = 240;
     let startTime = null;
     const animate = (currentTime) => {
       if (!startTime) startTime = currentTime;
@@ -80,7 +81,8 @@ class FooterAccordion {
     requestAnimationFrame(animate);
   }
 }
+
 window.addEventListener("DOMContentLoaded", () => {
-  footerService = new FooterAccordion("js-footerServiceList");
-  footerService = new FooterAccordion("js-footerInformationList");
+  modalService = new FooterAccordion("js-modalServiceList");
+  modalInformation = new FooterAccordion("js-modalInformationList");
 });

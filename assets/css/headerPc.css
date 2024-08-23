@@ -1,3 +1,7 @@
+html {
+  font-size: 62.5%;
+}
+
 .headerPc {
   display: flex;
   align-items: center;
@@ -17,16 +21,15 @@
   height: 69.54px;
   gap: 12px;
 }
-.headerPc .headerPc__logo .headerPc__logoImg {
+.headerPc .headerPc__logo .headerPc__logoImage {
   width: 140px;
-  height: 49.54px;
 }
 .headerPc .headerPc__logo .headerPc__logoText {
   color: #333;
-  font-size: 12px;
-  font-family: "IBM Plex Sans JP";
+  font-size: 1.4rem;
+  font-family: "IBM Plex Sans JP", sans-serif;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 1;
   text-decoration: none;
 }
 .headerPc .headerPc__nav {
@@ -37,36 +40,36 @@
   width: 516px;
   height: 72px;
 }
-.headerPc .headerPc__nav .headerPc__navTopList {
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopList {
   display: flex;
   justify-content: space-between;
   gap: 40px;
   align-items: center;
   list-style: none;
 }
-.headerPc .headerPc__nav .headerPc__navTopLeft {
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopLeft {
   display: flex;
   justify-content: space-between;
   gap: 28px;
 }
-.headerPc .headerPc__nav .headerPc__navTopLeftButton {
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopLeft .headerPc__navTopLeftButton {
   padding: 7px 16px;
   border: #258651 1px solid;
   border-radius: 22px;
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
   color: #1b8751;
-  font-size: 13px;
-  font-family: "IBM Plex Sans JP";
+  font-size: 1.3rem;
+  font-family: "IBM Plex Sans JP", sans-serif;
   font-weight: 700;
-  line-height: 13px;
+  line-height: 1;
   text-decoration: none;
 }
-.headerPc .headerPc__nav .headerPc__navTopLeftButton:hover {
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopLeft .headerPc__navTopLeftButton:hover {
   background-color: #258651;
   color: #fff;
 }
-.headerPc .headerPc__nav .headerPc__navTopRightButton {
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopRight .headerPc__navTopRightButton {
   display: inline-flex;
   align-items: center;
   position: relative;
@@ -77,13 +80,13 @@
   background-color: #258651;
   transition: all 0.3s ease-in-out;
   color: #fff;
-  font-size: 14px;
-  font-family: "IBM Plex Sans JP";
+  font-size: 1.4rem;
+  font-family: "IBM Plex Sans JP", sans-serif;
   font-weight: 700;
-  line-height: 14px;
+  line-height: 1;
   text-decoration: none;
 }
-.headerPc .headerPc__nav .headerPc__navTopRightButton::after {
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopRight .headerPc__navTopRightButton::after {
   position: absolute;
   top: 12px;
   right: 15px;
@@ -95,39 +98,33 @@
   transition: all 0.3s ease-in-out;
   content: "";
 }
-.headerPc .headerPc__nav .headerPc__navTopRightButton:hover {
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopRight .headerPc__navTopRightButton:hover {
   background-color: #fff;
   color: #258651;
-  font-size: 14px;
-  font-family: "IBM Plex Sans JP";
+  font-size: 1.4rem;
+  font-family: "IBM Plex Sans JP", sans-serif;
   font-weight: 700;
-  line-height: 14px;
+  line-height: 1;
   text-decoration: none;
 }
-.headerPc .headerPc__nav .headerPc__navTopRightButton:hover::after {
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopRight .headerPc__navTopRightButton:hover::after {
   border-color: #258651;
 }
-.headerPc .headerPc__navBottomList {
+.headerPc .headerPc__nav .headerPc__navBottomList {
   display: flex;
   justify-content: space-between;
   list-style: none;
   gap: 44px;
 }
-.headerPc .headerPc__navBottomListItem {
+.headerPc .headerPc__nav .headerPc__navBottomListItem {
   transition: all 0.3s ease-in-out;
   color: #333;
-  font-size: 17px;
-  font-family: "IBM Plex Sans JP";
+  font-size: 18px;
+  font-family: "IBM Plex Sans JP", sans-serif;
   font-weight: 700;
-  line-height: 23.8px;
+  line-height: 25.2px;
   text-decoration: none;
 }
-.headerPc .headerPc__navBottomListItem:hover {
+.headerPc .headerPc__nav .headerPc__navBottomListItem:hover {
   opacity: 0.6;
-}
-
-@media screen and (width <= 1140px) {
-  .headerPc {
-    display: none;
-  }
 }

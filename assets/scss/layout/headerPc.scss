@@ -1,17 +1,21 @@
-@mixin headerPc__navText($color, $fontSize, $fontHeight, $weight: 700) {
+@mixin header-pc-nav-text($color, $fontSize, $fontHeight, $weight: 700) {
   color: $color;
   font-size: $fontSize;
-  font-family: "IBM Plex Sans JP";
+  font-family: "IBM Plex Sans JP", sans-serif;
   font-weight: $weight;
   line-height: $fontHeight;
   text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 .headerPc {
   display: flex;
   align-items: center;
   height: 110px;
-  box-shadow: 0 0 8px 0 #0003;
+  box-shadow: 0 0 8px 0 rgba(0 0 0 / 0.2);
   text-wrap: nowrap;
   .headerPc__Wrap {
     display: flex;
@@ -24,12 +28,11 @@
     align-items: center;
     height: 69.54px;
     gap: 12px;
-    .headerPc__logoImg {
+    .headerPc__logoImage {
       width: 140px;
-      height: 49.54px;
     }
     .headerPc__logoText {
-      @include headerPc__navText(#333, 12px, 12px, 500);
+      @include header-pc-nav-text(#333, 1.4rem, 1, 500);
     }
   }
   .headerPc__nav {
@@ -40,19 +43,20 @@
     width: 516px;
     height: 72px;
     .headerPc__navTop {
-      &List {
+      .headerPc__navTopList {
         display: flex;
         justify-content: space-between;
         gap: 40px;
         align-items: center;
         list-style: none;
       }
-      &Left {
+
+      .headerPc__navTopLeft {
         display: flex;
         justify-content: space-between;
         gap: 28px;
-        &Button {
-          @include headerPc__navText(#1b8751, 13px, 13px);
+        .headerPc__navTopLeftButton {
+          @include header-pc-nav-text(#1b8751, 1.3rem, 1);
 
           padding: 7px 16px;
           border: #258651 1px solid;
@@ -65,9 +69,10 @@
           }
         }
       }
-      &Right {
-        &Button {
-          @include headerPc__navText(#fff, 14px, 14px);
+
+      .headerPc__navTopRight {
+        .headerPc__navTopRightButton {
+          @include header-pc-nav-text(#fff, 1.4rem, 1);
 
           display: inline-flex;
           align-items: center;
@@ -91,7 +96,7 @@
             content: "";
           }
           &:hover {
-            @include headerPc__navText(#258651, 14px, 14px);
+            @include header-pc-nav-text(#258651, 1.4rem, 1);
 
             background-color: #fff;
             &::after {
@@ -101,27 +106,21 @@
         }
       }
     }
-    &Bottom {
-      &List {
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        gap: 44px;
-      }
-      &ListItem {
-        @include headerPc__navText(#333, 17px, 23.8px);
 
-        transition: all 0.3s ease-in-out;
-        &:hover {
-          opacity: 0.6;
-        }
+    .headerPc__navBottomList {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      gap: 44px;
+    }
+
+    .headerPc__navBottomListItem {
+      @include header-pc-nav-text(#333, 18px, 25.2px);
+
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        opacity: 0.6;
       }
     }
-  }
-}
-
-@media screen and (width <= 1140px) {
-  .headerPc {
-    display: none;
   }
 }
