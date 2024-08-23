@@ -15,7 +15,7 @@ html {
   display: flex;
   align-items: center;
   height: 110px;
-  box-shadow: 0 0 8px 0 rgb(0 0 0 / 0.2);
+  box-shadow: 0 0 8px 0 rgba(0 0 0 / 0.2);
   text-wrap: nowrap;
   .headerPc__Wrap {
     display: flex;
@@ -122,11 +122,5 @@ html {
         opacity: 0.6;
       }
     }
-  }
-}
-
-@media screen and (width <= 1140px) {
-  .headerPc {
-    display: none;
   }
 }

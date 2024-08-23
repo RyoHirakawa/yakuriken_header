@@ -52,11 +52,7 @@ html {
   justify-content: space-between;
   gap: 28px;
 }
-.headerPc
-  .headerPc__nav
-  .headerPc__navTop
-  .headerPc__navTopLeft
-  .headerPc__navTopLeftButton {
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopLeft .headerPc__navTopLeftButton {
   padding: 7px 16px;
   border: #258651 1px solid;
   border-radius: 22px;
@@ -69,19 +65,11 @@ html {
   line-height: 1;
   text-decoration: none;
 }
-.headerPc
-  .headerPc__nav
-  .headerPc__navTop
-  .headerPc__navTopLeft
-  .headerPc__navTopLeftButton:hover {
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopLeft .headerPc__navTopLeftButton:hover {
   background-color: #258651;
   color: #fff;
 }
-.headerPc
-  .headerPc__nav
-  .headerPc__navTop
-  .headerPc__navTopRight
-  .headerPc__navTopRightButton {
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopRight .headerPc__navTopRightButton {
   display: inline-flex;
   align-items: center;
   position: relative;
@@ -98,11 +86,7 @@ html {
   line-height: 1;
   text-decoration: none;
 }
-.headerPc
-  .headerPc__nav
-  .headerPc__navTop
-  .headerPc__navTopRight
-  .headerPc__navTopRightButton::after {
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopRight .headerPc__navTopRightButton::after {
   position: absolute;
   top: 12px;
   right: 15px;
@@ -114,11 +98,7 @@ html {
   transition: all 0.3s ease-in-out;
   content: "";
 }
-.headerPc
-  .headerPc__nav
-  .headerPc__navTop
-  .headerPc__navTopRight
-  .headerPc__navTopRightButton:hover {
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopRight .headerPc__navTopRightButton:hover {
   background-color: #fff;
   color: #258651;
   font-size: 1.4rem;
@@ -127,11 +107,7 @@ html {
   line-height: 1;
   text-decoration: none;
 }
-.headerPc
-  .headerPc__nav
-  .headerPc__navTop
-  .headerPc__navTopRight
-  .headerPc__navTopRightButton:hover::after {
+.headerPc .headerPc__nav .headerPc__navTop .headerPc__navTopRight .headerPc__navTopRightButton:hover::after {
   border-color: #258651;
 }
 .headerPc .headerPc__nav .headerPc__navBottomList {
@@ -151,10 +127,4 @@ html {
 }
 .headerPc .headerPc__nav .headerPc__navBottomListItem:hover {
   opacity: 0.6;
-}
-
-@media screen and (width <= 1140px) {
-  .headerPc {
-    display: none;
-  }
 }

@@ -6,6 +6,10 @@ $header-sp-animation-duration: 0.7s;
 
 // スマホ&タブレット共通
 @media screen and (width <=1140px) {
+  .headerPc {
+    display: none;
+  }
+
   .headerSp {
     display: block;
   }
@@ -54,7 +58,7 @@ $header-sp-animation-duration: 0.7s;
     z-index: 500;
     width: 100%;
     height: 64px;
-    box-shadow: 0 -1px 5px rgb(0 0 0 / 0.2);
+    box-shadow: 0 -1px 5px rgba(0 0 0 / 0.2);
     background-color: #fff;
     transition: $header-sp-animation-duration;
 
@@ -147,7 +151,7 @@ $header-sp-animation-duration: 0.7s;
     z-index: 100;
     width: 100%;
     height: 100%;
-    background: rgb(37 134 81 / 0.6);
+    background: rgba(37 134 81 / 0.6);
   }
 
   .spMenuForeground {
@@ -193,7 +197,7 @@ $header-sp-animation-duration: 0.7s;
     }
   }
 
-  // footer埋め込み部分
+  // ↓footer埋め込み部分
   .modalListContainer {
     gap: 32px;
     display: flex;
@@ -290,7 +294,7 @@ $header-sp-animation-duration: 0.7s;
     }
   }
 
-  // footer埋め込み部分終わり
+  // ↑footer埋め込み部分終わり
 
   .spMenuCloseButton {
     display: flex;
@@ -323,8 +327,9 @@ $header-sp-animation-duration: 0.7s;
     width: calc(100vw - 62px);
     height: calc(100vh - 124px);
     margin-top: 32px;
-    .spMenuWindow__top {
-      .spMenuWindow__top__text {
+
+    .spMenuWindowCompany {
+      .spMenuWindowCompany__text {
         font-size: 1.2rem;
       }
     }
