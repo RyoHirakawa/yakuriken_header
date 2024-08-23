@@ -5,6 +5,7 @@ function openSpMenu() {
     const headerSp__top = document.querySelector("#js-headerSp__top");
     headerSp__top.classList.add("--hidden");
 
+
     const headerSp__bottom = document.querySelector("#js-headerSp__bottom");
     headerSp__bottom.classList.add("--hidden");
 
@@ -14,6 +15,7 @@ function openSpMenu() {
     const spMenu = document.querySelector("#js-spMenu");
     spMenu.classList.remove("--hidden");
   }
+
 }
 
 function closeSpMenu() {
@@ -27,6 +29,7 @@ function closeSpMenu() {
   spMenu.classList.add("--hidden");
 
   const spMenuForeground = document.querySelector("#js-spMenuForeground");
+
   const spMenuOpenButton = document.querySelector("#js-spMenuOpenButton");
   spMenuOpenButton.classList.remove("js-spMenuOpenButton-active");
   setTimeout(() => {
