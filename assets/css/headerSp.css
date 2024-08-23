@@ -94,6 +94,7 @@
     opacity: 0;
   }
   .spMenu.--hidden .spMenuForeground {
+    display: hidden;
     -webkit-animation: slide-out 0.7s forwards;
             animation: slide-out 0.7s forwards;
   }

@@ -119,6 +119,7 @@ $header-sp-animation-duration: 0.7s;
       }
 
       .spMenuForeground {
+        display: none;
         animation: slide-out $header-sp-animation-duration forwards;
       }
     }
