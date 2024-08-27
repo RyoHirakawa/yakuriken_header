@@ -7,7 +7,7 @@ class FooterAccordion {
   list;
   isActive;
   constructor(id) {
-    this.label = document.querySelector(`label[for="${id}"]`);
+    this.label = document.querySelector(`button[for="${id}"]`);
     this.list = document.getElementById(`${id}`);
     this.isActive = false;
     this.optimazeByWindowSize();
@@ -41,8 +41,8 @@ class FooterAccordion {
         instance.isActive = false;
       }
     });
-    this.list.classList.add("-open");
-    this.label.classList.add("-open");
+    this.list.classList.add("--open");
+    this.label.classList.add("--open");
     this.list.style.height = `${0}px`;
     this.list.offsetHeight; //トリガーリフロー
     const fullHeight = this.list.scrollHeight;
@@ -61,7 +61,7 @@ class FooterAccordion {
     requestAnimationFrame(animate);
   }
   closeList(animationMs) {
-    this.label.classList.remove("-open");
+    this.label.classList.remove("--open");
     this.list.style.height = this.list.scrollHeight;
     this.list.offsetHeight; // トリガーリフロー
     const fullHeight = this.list.scrollHeight;
@@ -74,7 +74,7 @@ class FooterAccordion {
       if (progress < 1) {
         requestAnimationFrame(animate);
       } else {
-        this.list.classList.remove("-open");
+        this.list.classList.remove("--open");
         this.list.style.height = `${0}px`; // 最終的な高さに設定
       }
     };
